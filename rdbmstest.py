@@ -42,7 +42,7 @@ rdbmsMemory = []
 numpyTime = []
 numpyMemory = []
 
-x = [i for i in range(725,800)]
+x = [i for i in range(1,200)]
 
 for i in x:
     myGHZ = GHZCircuit(i)
