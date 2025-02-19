@@ -14,7 +14,8 @@ def change(n, circuit: QCircuit):
     for (gate, indices) in circuit.gateList:
         gateList.append({
             "qubits":indices,
-            "gate":gate.id
+            "gate":gate.id,
+            "parameters":gate.params
         })
 
     json = {

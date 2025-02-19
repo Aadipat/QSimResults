@@ -20,16 +20,16 @@ def getTimeMemory(simulator, circuit):
 
 
 
-n = 5
+n = 2
 myGHZ = QFTCircuit(n)
 rdbmsJson = change(n, myGHZ)
 print(rdbmsJson)
 rdbmsSim=SQLITE_MPS.run_circuit_json(rdbmsJson)
-# x=rdbmsSim.get_statevector_np()
-# print(x)
+x=rdbmsSim.get_statevector_np()
+print(x)
 npSim = QuantumMPS(n)
 npSim.applyCircuit(myGHZ)
-# print(np.ravel(q.convert_To_One_Tensor()))
+print(np.ravel(npSim.convert_To_One_Tensor()))
 
 
 print("RDBMS\t")
